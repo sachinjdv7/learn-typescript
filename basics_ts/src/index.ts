@@ -26,3 +26,15 @@ arr.forEach((e) => e.toFixed());
 let user: [number, string] = [1, "sachin"];
 user.push(5); // gaps in typescript not throwin the errors
 console.log(user);
+
+// enum
+
+const enum Size {
+  Small = 1,
+  Medium,
+  Large,
+}
+
+let mySize: Size = Size.Large;
+
+console.log(mySize);
