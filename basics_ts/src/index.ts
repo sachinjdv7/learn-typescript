@@ -18,3 +18,11 @@ function render(document: any) {
 let arr: number[] = [1, 2, 3];
 arr[0] = 5;
 arr.forEach((e) => e.toFixed());
+
+// tuples
+
+// its only useful when two values mean key value pair
+
+let user: [number, string] = [1, "sachin"];
+user.push(5); // gaps in typescript not throwin the errors
+console.log(user);
