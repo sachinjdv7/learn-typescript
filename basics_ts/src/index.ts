@@ -12,3 +12,9 @@ let level;
 function render(document: any) {
   console.log(document);
 }
+
+// arrays
+
+let arr: number[] = [1, 2, 3];
+arr[0] = 5;
+arr.forEach((e) => e.toFixed());
