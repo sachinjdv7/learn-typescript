@@ -11,15 +11,21 @@ class Account {
   }
 
   private calculateTax() {}
-  getBalance(): number {
+  get balance(): number {
     return this._balance;
+  }
+  set balance(value: number) {
+    if (value < 0) throw new Error("Invalid value");
+
+    this._balance = value;
   }
 }
 
 let account = new Account(1, "sachin", 0);
 account.deposit(1_000);
 // account.balance = -1;
-console.log(account.getBalance());
+console.log(account.balance);
+account.balance = 5;
 
 // account.id = 0;
 console.log(account instanceof Account);
