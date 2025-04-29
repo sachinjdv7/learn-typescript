@@ -1,3 +1,30 @@
+/**
+ * KEY POINTS: Optional Chaining
+ *
+ * Definition:
+ * 1. ?. operator for safely accessing nested properties
+ * 2. Returns undefined if any part of the chain is null/undefined
+ * 3. Prevents runtime errors from null/undefined access
+ *
+ * Use Cases:
+ * 1. API response handling
+ * 2. Deeply nested objects
+ * 3. DOM element access
+ * 4. Configuration objects
+ *
+ * Benefits:
+ * 1. Safer property access
+ * 2. Cleaner than multiple if checks
+ * 3. Combines well with nullish coalescing
+ * 4. Reduces boilerplate code
+ *
+ * Best Practices:
+ * 1. Use with potentially undefined properties
+ * 2. Combine with type guards when needed
+ * 3. Don't overuse - consider restructuring deep nesting
+ * 4. Consider default values with ?? operator
+ */
+
 type Customer = {
   birthday?: Date;
 };

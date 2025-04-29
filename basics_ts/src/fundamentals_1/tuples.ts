@@ -1,53 +1,42 @@
 /**
- * TypeScript Tuples Guide
+ * KEY POINTS: Tuples in TypeScript
  *
- * WHAT ARE TUPLES:
- * - Fixed-length arrays where each element has a specific type
- * - Order of elements is significant and types are predetermined
- * - Like strongly-typed arrays with a fixed number of elements
+ * Definition:
+ * 1. Fixed-length arrays with ordered types
+ * 2. Each position has a specific type and meaning
+ * 3. Stricter than regular arrays
  *
- * TYPES OF TUPLES:
+ * Types of Tuples:
  * 1. Basic Tuples:
- *    - Fixed number of elements with specific types
- *    - Example: type Point = [number, number]
- *
- * 2. Optional Elements:
- *    - Elements can be marked as optional with '?'
- *    - Example: type NameAge = [string, number?]
- *
- * 3. Rest Elements:
- *    - Can include rest elements using spread operator
- *    - Example: type StringNumberBooleans = [string, number, ...boolean[]]
- *
+ *    - Fixed number of elements
+ *    - Each position typed explicitly
+ * 2. Optional Tuples:
+ *    - Elements can be optional (?)
+ *    - Must come at end
+ * 3. Rest Tuples:
+ *    - Can include spread elements
+ *    - Useful for extending tuples
  * 4. Readonly Tuples:
- *    - Immutable tuples using 'readonly' modifier
- *    - Example: type ReadOnlyPoint = readonly [number, number]
+ *    - Immutable tuple values
+ *    - Prevents accidental modifications
  *
- * WHEN TO USE TUPLES:
- * 1. When you need a fixed collection of values with different types
- * 2. For representing structured data like coordinates
- * 3. When the order and types of elements are important
- * 4. For returning multiple values from functions
+ * Best Practices:
+ * 1. Keep tuples small (2-3 elements)
+ * 2. Use descriptive type aliases
+ * 3. Consider objects for complex data
+ * 4. Document element meanings
  *
- * BEST PRACTICES:
- * 1. Keep tuples small (2-3 elements ideally)
- * 2. Use descriptive type aliases for tuples
- * 3. Consider using interfaces/objects for complex data structures
- * 4. Use readonly tuples when immutability is needed
- * 5. Document the meaning of each position in the tuple
+ * Common Use Cases:
+ * 1. Coordinates (lat, long)
+ * 2. RGB/RGBA colors
+ * 3. Key-value pairs
+ * 4. React useState returns
  *
- * CAUTIONS:
- * 1. Avoid using tuples for complex data structures
- * 2. Be careful with tuple element access (use destructuring)
- * 3. Remember tuples are zero-indexed
- * 4. Consider readability vs using an interface
- *
- * COMMON USE CASES:
- * - Coordinates (latitude, longitude)
- * - Key-value pairs
- * - RGB/RGBA color values
- * - State management (React useState)
- * - Success/Error responses
+ * Cautions:
+ * 1. Don't use for complex structures
+ * 2. Be mindful of readability
+ * 3. Watch for type inference
+ * 4. Consider named properties alternative
  */
 
 // Best Practice: Use type aliases for better readability and reuse

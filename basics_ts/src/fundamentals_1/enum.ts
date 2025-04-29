@@ -1,51 +1,39 @@
 /**
- * TypeScript Enums Guide
+ * KEY POINTS: Enums in TypeScript
  *
- * WHAT ARE ENUMS:
- * - Enumerations: A way to define a set of named constants
- * - Can be numeric (auto-incremented) or string-based
- * - Provide type safety and intellisense for predefined values
+ * Definition:
+ * 1. Enums: Named constant sets
+ * 2. Can be numeric (auto-incremented) or string-based
+ * 3. Used for related constant values
  *
- * TYPES OF ENUMS:
+ * Types of Enums:
  * 1. Numeric Enums:
- *    - Auto-incremented starting from 0 if not specified
- *    - Example: enum Direction { North = 1, South, East, West }
- *
+ *    - Auto-incrementing from 0 or specified number
+ *    - Memory efficient
  * 2. String Enums:
- *    - Must have explicit string values
- *    - More readable in runtime debugging
- *    - Example: enum Status { Success = "SUCCESS", Error = "ERROR" }
- *
+ *    - More readable and debuggable
+ *    - Better for serialization
  * 3. Const Enums:
- *    - Completely removed during compilation for better performance
- *    - Values are inlined where used
- *    - Use when you don't need enum as an object at runtime
+ *    - Better performance
+ *    - Inlined at compile time
  *
- * WHEN TO USE ENUMS:
- * 1. For a fixed set of constants (status codes, roles, states)
- * 2. When values are known at compile time
- * 3. When you need type safety for a set of related values
- * 4. To improve code readability and maintenance
+ * Best Practices:
+ * 1. Use PascalCase for enum names
+ * 2. Use UPPERCASE for enum values
+ * 3. Prefer const enums for better performance
+ * 4. Use string enums for better debugging
  *
- * BEST PRACTICES:
- * 1. Use const enum for better performance when possible
- * 2. Use PascalCase for enum names
- * 3. Use UPPERCASE for enum values (especially in string enums)
- * 4. Prefer string enums over numeric for better debugging
- * 5. Keep enums focused and small (single responsibility)
+ * Common Use Cases:
+ * 1. Status codes and states
+ * 2. User roles and permissions
+ * 3. Configuration options
+ * 4. API endpoints
  *
- * CAUTIONS:
- * 1. Avoid using computed values in enums
- * 2. Be careful with numeric enum's auto-incrementing behavior
- * 3. Remember const enums can't be reverse mapped
- * 4. Consider union types for simple cases
- *
- * COMMON USE CASES:
- * - API Status Codes
- * - User Roles/Permissions
- * - Application States
- * - Configuration Options
- * - HTTP Methods
+ * Cautions:
+ * 1. Avoid computed values
+ * 2. Be aware of reverse mappings in numeric enums
+ * 3. Consider union types for simple cases
+ * 4. Remember const enums are inlined
  */
 
 // Best Practice: Use const enum for better performance as they are removed during compilation
