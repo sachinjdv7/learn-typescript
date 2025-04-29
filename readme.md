@@ -45,6 +45,9 @@
 3. outDir = where is js files ("./dist")
 4. removeComments = remove comments from ts -> js without comments (true)
 5. noEmitOnError = if you have any error in code ts not generate js code (true)
+6. noUnusedParameters": true this ensure to unused paramenter
+7. "noImplicitReturns": true for handle function undefined
+8. "noUnusedLocals": true, tells that no used variables
 
 - run tsc now compiler run all ts file and genrate js files in /dist folder
 - no need to specify specific file to compile
@@ -59,3 +62,7 @@
 - this will create launch.json file
 - add "preLaunchTask": "tsc: build - tsconfig.json" into file
 - also we watch specific variable
+
+## Learn
+
+- call by reference and call by value(array with const)
