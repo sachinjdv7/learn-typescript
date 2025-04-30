@@ -57,3 +57,20 @@ function getNames(people: Person[]) {
     console.log(person.fullName);
   }
 }
+
+/**
+ * private vs protected
+ * ====================
+ * private :-
+ *          when you use private keyword with method that will be accessible
+ * inside the class only
+ *          When try use this method in derived class this will not available
+ *
+ * protected :-
+ *           When you use protected keyword with method that will be assesible
+ * inside the class only
+ *           This protected method can accessible in derived class as well.
+ *
+ * caution :- Don't use that often only use when you know what are doing.
+ *
+ */
