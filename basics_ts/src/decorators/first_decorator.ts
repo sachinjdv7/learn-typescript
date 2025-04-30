@@ -14,5 +14,14 @@ function Component(options: ComponentOptions) {
   };
 }
 
+function Pipe(constructor: Function) {
+  console.log("Pipe constuctor called");
+  constructor.prototype.pipe = true;
+}
+
 @Component({ selectors: "#my-profile" })
+@Pipe
 class ProfileComponent {}
+
+// Pipe constuctor called
+// ProfileComponent is called
