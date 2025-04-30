@@ -9,11 +9,22 @@ class Store<T> {
   add(obj: T): void {
     this._objects.push(obj);
   }
+
+  // T is product
+  //key of T -> 'name' | 'price'
+  find1(property: keyof T, value: unknown): T | undefined {
+    return this._objects.find((obj) => obj[property] === value);
+  }
 }
-// pass on the generic type parameter
-class CompressibleStore<T> extends Store<T> {
-  compress() {}
-}
+
+let store = new Store<Product>();
+store.find1("name", "1"),
+  store.find1("name", 1),
+  // store.find1("nonexisting key", "1"), -> catch this issue at the compile time
+  // pass on the generic type parameter
+  class CompressibleStore<T> extends Store<T> {
+    compress() {}
+  };
 // restrict the generic type parameter
 class SearchableStore<T extends { name: string }> extends Store<T> {
   find(name: string): T | undefined {
@@ -24,7 +35,7 @@ class SearchableStore<T extends { name: string }> extends Store<T> {
 // fix the generic typ parameter
 
 class ProductStore extends Store<Product> {
-  filterByCategory(category: string): Product[] {
+  filterByCategory(_: string): Product[] {
     return [];
   }
 }
